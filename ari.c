@@ -1,11 +1,13 @@
 # include<ctype.h>
-
+# include<cs50.h>
+# include<string.h>
 string ari(string s){
 int sentence=0;
 int word=0;
 int character=0;
 float ari;
 int score;
+string level;
 for(int i=0;s[i]!='\0';i++){
   if(s[i] == '.' || s[i] == '!' || s[i] == '?'){
         sentence++;
@@ -21,45 +23,46 @@ ari=4.71*((float)character/(float)word)+0.5*((float)word/(float)sentence)-(21.43
 score=(int)ari +1;
 
 if(score==1){
-  return "Kindergarten";
+  level="Kindergarten";
  }
 if(score==2){
-  return "First/Second Grade";
+  level="First/Second Grade";
  }  
 if(score==3){
-  return "Third Grade";
+  level="Third Grade";
  }   
 if(score==4){
-  return "Fourth Grade";
+  level="Fourth Grade";
  }   
 if(score==5){
-  return "Fifth Grade";
+  level="Fifth Grade";
  }   
 if(score==6){
-  return "Sixth Grade";
+  level="Sixth Grade";
  }
 if(score==7){
-  return "Seventh Grade";
+ level="Seventh Grade";
  }      
 if(score==8){
-  return "Eighth Grade";
+  level="Eighth Grade";
  }   
 if(score==9){
-  return "Ninth Grade";
+ level="Ninth Grade";
  }   
 if(score==10){
-  return "Tenth Grade";
+  level="Tenth Grade";
  }   
 if(score==11){
-  return "Eleventh Grade";
+  level="Eleventh Grade";
  }   
 if(score==12){
-  return "Twelfth Grade";
+  level="Twelfth Grade";
  }   
 if(score==13){
-  return "College student";
+  level="College student";
  }   
 if(score==14){
-  return "Professor";
- }   
+  level="Professor";
+ } 
+return level;   
 }
